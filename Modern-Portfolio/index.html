@@ -23,16 +23,66 @@
        1. Preloader Screen
        ========================================================================== -->
     <div id="preloader">
+        <div class="loader-particles">
+            <div class="lp-particle" style="top: 15%; left: 25%; width: 2px; height: 2px;"></div>
+            <div class="lp-particle" style="top: 45%; left: 75%; width: 3px; height: 3px;"></div>
+            <div class="lp-particle" style="top: 75%; left: 10%; width: 2px; height: 2px;"></div>
+            <div class="lp-particle" style="top: 85%; left: 80%; width: 2.5px; height: 2.5px;"></div>
+            <div class="lp-particle" style="top: 35%; left: 40%; width: 2px; height: 2px;"></div>
+            <div class="lp-particle" style="top: 65%; left: 65%; width: 3px; height: 3px;"></div>
+        </div>
         <div class="loader-container">
-            <div class="loader-logo">{ HARI PRASANTH }</div>
-            <div class="loader-bar-bg">
-                <div class="loader-bar-fill"></div>
+            <div class="loader-logo-svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 531" id="loader-phoenix-svg">
+  <!-- Ambient Glow Behind Bird -->
+  <circle cx="235.0" cy="265.5" r="160" fill="#FF0000" opacity="0" id="loader-bg-glow" style="filter: blur(50px); transform-origin: 235.0px 265.5px;" />
+  <!-- Left Wing Feathers -->
+  <g id="left-wing-group">
+    <path id="left-feather-0" class="left-feather" d="M 95 5 L 96 6 L 95 8 L 94 10 L 93 13 L 92 15 L 91 18 L 90 22 L 89 25 L 88 30 L 87 36 L 86 59 L 87 65 L 88 69 L 89 73 L 90 77 L 91 79 L 92 82 L 93 84 L 94 86 L 95 89 L 96 91 L 97 93 L 99 96 L 100 98 L 101 100 L 103 103 L 105 106 L 107 109 L 109 112 L 114 118 L 120 125 L 130 136 L 138 145 L 145 153 L 149 158 L 152 162 L 155 166 L 156 168 L 158 171 L 159 173 L 160 176 L 161 179 L 162 183 L 158 178 L 151 170 L 145 165 L 134 155 L 130 152 L 125 148 L 121 145 L 117 142 L 113 139 L 109 136 L 101 129 L 93 120 L 89 115 L 86 111 L 84 108 L 81 104 L 80 102 L 79 100 L 78 98 L 77 96 L 76 93 L 75 90 L 74 87 L 73 85 L 72 80 L 71 75 L 70 64 L 69 59 L 70 49 L 71 44 L 72 41 L 73 38 L 74 36 L 75 34 L 76 31 L 77 29 L 78 27 L 79 25 L 81 22 L 83 19 L 85 16 L 92 8 L 95 6 Z" fill="#FF0000" style="transform-origin: 99.25857338820302px 96.7451989026063px; opacity: 0;" />
+    <path id="left-feather-1" class="left-feather" d="M 48 36 L 47 41 L 46 50 L 47 59 L 48 67 L 49 71 L 50 76 L 51 78 L 52 81 L 53 83 L 54 85 L 55 87 L 56 89 L 57 91 L 59 94 L 60 96 L 62 99 L 63 101 L 66 105 L 69 109 L 89 130 L 94 134 L 98 137 L 102 140 L 106 143 L 108 144 L 111 146 L 115 149 L 118 151 L 123 155 L 128 159 L 132 162 L 137 166 L 145 173 L 154 181 L 170 196 L 180 205 L 187 211 L 193 216 L 196 218 L 193 217 L 189 216 L 187 215 L 184 214 L 182 213 L 180 212 L 178 211 L 174 208 L 170 205 L 164 200 L 156 193 L 148 184 L 144 181 L 140 178 L 136 175 L 134 174 L 131 172 L 129 171 L 126 169 L 124 168 L 122 167 L 120 166 L 117 164 L 115 163 L 113 162 L 111 161 L 108 160 L 106 159 L 104 158 L 102 157 L 100 156 L 98 155 L 96 154 L 94 153 L 91 151 L 87 149 L 85 148 L 82 146 L 79 144 L 77 143 L 74 141 L 70 138 L 66 135 L 59 129 L 50 121 L 45 115 L 41 110 L 40 108 L 38 105 L 37 103 L 36 100 L 35 98 L 34 95 L 33 92 L 32 88 L 31 80 L 32 75 L 33 68 L 34 64 L 35 60 L 36 57 L 37 55 L 38 52 L 39 50 L 42 46 L 44 42 L 46 39 L 47 37 Z" fill="#FF0000" style="transform-origin: 84.04830103903397px 126.95310306093793px; opacity: 0;" />
+    <path id="left-feather-2" class="left-feather" d="M 17 110 L 18 112 L 22 117 L 31 125 L 38 131 L 42 134 L 45 136 L 48 138 L 51 140 L 54 142 L 57 144 L 59 145 L 62 147 L 64 148 L 66 149 L 69 151 L 71 152 L 73 153 L 76 154 L 79 156 L 81 157 L 84 158 L 86 159 L 90 161 L 92 162 L 94 163 L 96 164 L 99 165 L 101 166 L 104 167 L 106 168 L 108 169 L 110 170 L 112 171 L 115 172 L 117 173 L 119 174 L 121 175 L 123 176 L 125 177 L 128 178 L 131 180 L 134 181 L 136 182 L 139 184 L 141 185 L 143 186 L 146 188 L 149 190 L 151 193 L 148 192 L 145 191 L 142 190 L 139 189 L 135 188 L 132 187 L 128 186 L 125 185 L 120 184 L 115 183 L 111 182 L 107 181 L 103 180 L 98 179 L 93 178 L 88 177 L 85 176 L 82 175 L 79 174 L 74 173 L 71 172 L 68 171 L 66 170 L 64 169 L 61 168 L 59 167 L 57 166 L 55 165 L 53 164 L 51 163 L 49 162 L 44 158 L 36 151 L 31 145 L 28 141 L 26 138 L 25 136 L 24 134 L 23 132 L 22 130 L 21 127 L 20 125 L 19 122 L 18 118 L 17 114 L 17 111 Z" fill="#FF0000" style="transform-origin: 71.28864970645793px 158.30724070450097px; opacity: 0;" />
+    <path id="left-feather-3" class="left-feather" d="M 15 162 L 18 164 L 22 167 L 24 168 L 27 170 L 30 171 L 32 172 L 34 173 L 36 174 L 39 175 L 42 176 L 45 177 L 48 178 L 53 179 L 57 180 L 62 181 L 67 182 L 73 183 L 79 184 L 86 185 L 90 186 L 94 187 L 99 188 L 106 189 L 110 190 L 114 191 L 118 192 L 122 193 L 125 194 L 129 195 L 132 196 L 136 197 L 139 198 L 143 199 L 146 200 L 149 201 L 151 202 L 153 203 L 155 204 L 157 205 L 160 207 L 157 206 L 144 205 L 97 204 L 80 203 L 73 202 L 69 201 L 65 200 L 63 199 L 60 198 L 58 197 L 55 196 L 53 195 L 50 194 L 48 193 L 46 192 L 44 191 L 42 190 L 38 187 L 35 185 L 33 184 L 21 173 L 19 170 L 18 168 L 16 165 L 15 163 Z" fill="#FF0000" style="transform-origin: 82.17986314760509px 191.71309872922777px; opacity: 0;" />
+    <path id="left-feather-4" class="left-feather" d="M 39 207 L 42 208 L 45 209 L 49 210 L 53 211 L 55 210 L 62 211 L 64 211 L 89 212 L 149 213 L 162 214 L 169 215 L 173 216 L 176 217 L 176 219 L 170 220 L 167 221 L 162 222 L 158 223 L 152 224 L 147 225 L 141 226 L 136 227 L 129 228 L 121 229 L 110 230 L 77 229 L 69 228 L 66 227 L 64 226 L 61 225 L 58 223 L 56 222 L 53 220 L 45 213 L 40 209 L 40 208 Z" fill="#FF0000" style="transform-origin: 104.09579563597659px 219.73230441724323px; opacity: 0;" />
+    <path id="left-feather-5" class="left-feather" d="M 186 224 L 187 225 L 184 227 L 181 229 L 179 230 L 176 232 L 174 233 L 172 234 L 169 235 L 167 236 L 165 237 L 163 238 L 160 239 L 158 240 L 156 241 L 153 242 L 150 243 L 147 244 L 144 245 L 141 246 L 137 247 L 134 248 L 130 249 L 127 250 L 123 251 L 117 252 L 112 253 L 107 254 L 87 253 L 83 252 L 80 251 L 77 250 L 74 248 L 72 247 L 69 245 L 65 242 L 60 238 L 72 239 L 79 240 L 90 239 L 98 238 L 105 237 L 112 236 L 118 235 L 123 234 L 129 233 L 136 232 L 140 231 L 146 230 L 153 229 L 158 228 L 164 227 L 171 226 L 178 225 L 185 225 Z" fill="#FF0000" style="transform-origin: 120.81327543424318px 240.89205955334987px; opacity: 0;" />
+    <path id="left-feather-6" class="left-feather" d="M 192 230 L 193 231 L 182 241 L 175 247 L 171 250 L 167 253 L 163 256 L 161 257 L 158 259 L 155 261 L 153 262 L 150 264 L 148 265 L 146 266 L 144 267 L 140 269 L 138 270 L 136 271 L 133 272 L 131 273 L 127 274 L 121 275 L 108 276 L 103 275 L 98 274 L 96 273 L 94 272 L 92 271 L 90 270 L 87 268 L 91 266 L 100 265 L 107 264 L 116 263 L 121 262 L 124 261 L 127 260 L 129 259 L 132 258 L 134 257 L 137 256 L 139 255 L 142 254 L 144 253 L 147 252 L 149 251 L 152 250 L 154 249 L 156 248 L 159 247 L 161 246 L 163 245 L 165 244 L 167 243 L 169 242 L 171 241 L 173 240 L 176 239 L 178 238 L 180 237 L 182 236 L 185 234 L 187 233 L 189 232 L 191 231 Z" fill="#FF0000" style="transform-origin: 137.491214057508px 259.87460063897765px; opacity: 0;" />
+    <path id="left-feather-7" class="left-feather" d="M 194 241 L 196 242 L 194 245 L 192 248 L 190 251 L 187 255 L 182 261 L 178 266 L 167 276 L 161 281 L 154 287 L 151 289 L 148 290 L 146 291 L 143 292 L 138 293 L 123 294 L 120 293 L 118 292 L 115 291 L 112 289 L 110 286 L 114 287 L 120 286 L 125 285 L 129 284 L 133 283 L 136 282 L 138 281 L 140 280 L 142 279 L 144 278 L 146 277 L 149 275 L 152 273 L 156 270 L 160 267 L 166 262 L 172 257 L 178 252 L 181 250 L 185 247 L 188 245 L 191 243 L 193 242 Z" fill="#FF0000" style="transform-origin: 155.26712328767124px 274.7172211350294px; opacity: 0;" />
+    <path id="left-feather-8" class="left-feather" d="M 198 251 L 199 252 L 198 258 L 197 263 L 196 266 L 195 269 L 194 271 L 193 273 L 192 276 L 190 279 L 189 281 L 187 284 L 186 286 L 182 291 L 171 301 L 168 303 L 165 304 L 163 305 L 159 306 L 144 307 L 141 306 L 143 305 L 146 303 L 149 301 L 152 299 L 156 296 L 159 294 L 167 287 L 182 271 L 187 265 L 192 259 L 196 254 L 198 252 Z" fill="#FF0000" style="transform-origin: 174.02007083825265px 286.40613931523023px; opacity: 0;" />
+    <path id="left-feather-9" class="left-feather" d="M 205 263 L 206 265 L 205 281 L 204 285 L 203 288 L 202 290 L 201 292 L 199 295 L 191 304 L 187 307 L 185 308 L 183 309 L 181 310 L 178 311 L 183 304 L 186 300 L 190 295 L 191 293 L 193 290 L 194 288 L 196 285 L 197 283 L 198 281 L 199 279 L 200 277 L 201 275 L 202 272 L 203 269 L 204 267 L 205 264 Z" fill="#FF0000" style="transform-origin: 195.69473684210527px 289.92105263157896px; opacity: 0;" />
+  </g>
+  <!-- Right Wing Feathers -->
+  <g id="right-wing-group">
+    <path id="right-feather-0" class="right-feather" d="M 369 5 L 376 13 L 380 18 L 382 21 L 384 24 L 385 26 L 386 28 L 388 31 L 389 34 L 390 36 L 391 39 L 392 42 L 393 46 L 394 54 L 395 67 L 394 75 L 393 80 L 392 84 L 391 87 L 390 90 L 389 93 L 388 96 L 387 98 L 386 100 L 385 102 L 383 105 L 382 107 L 380 110 L 377 114 L 374 118 L 359 132 L 352 138 L 348 141 L 344 144 L 341 146 L 336 150 L 332 153 L 326 158 L 308 177 L 305 181 L 302 183 L 303 180 L 304 176 L 305 174 L 306 172 L 308 168 L 310 165 L 314 160 L 316 157 L 320 152 L 327 144 L 335 135 L 346 123 L 353 115 L 357 110 L 358 108 L 360 105 L 362 102 L 363 100 L 365 97 L 366 95 L 367 93 L 368 91 L 369 89 L 370 87 L 371 85 L 373 81 L 374 78 L 375 74 L 376 71 L 377 67 L 378 62 L 379 55 L 378 41 L 377 33 L 376 28 L 375 24 L 374 21 L 373 17 L 372 14 L 371 11 L 370 9 L 369 7 L 369 6 Z" fill="#FF0000" style="transform-origin: 364.82614647501714px 97.22929500342231px; opacity: 0;" />
+    <path id="right-feather-1" class="right-feather" d="M 416 36 L 417 37 L 420 41 L 422 44 L 423 46 L 424 48 L 426 51 L 427 54 L 428 56 L 429 59 L 430 62 L 431 66 L 432 72 L 433 83 L 432 90 L 431 93 L 430 96 L 429 99 L 428 101 L 427 103 L 426 105 L 425 107 L 423 110 L 421 113 L 419 116 L 402 132 L 397 136 L 393 139 L 389 142 L 386 144 L 384 145 L 381 147 L 379 148 L 376 150 L 374 151 L 372 152 L 370 153 L 368 154 L 366 155 L 364 156 L 362 157 L 360 158 L 358 159 L 356 160 L 354 161 L 352 162 L 350 163 L 348 164 L 346 165 L 344 166 L 342 167 L 340 168 L 337 170 L 335 171 L 332 173 L 330 174 L 327 176 L 323 179 L 318 183 L 298 202 L 292 207 L 288 210 L 286 211 L 284 212 L 282 213 L 280 214 L 278 215 L 275 216 L 272 217 L 268 218 L 270 217 L 273 215 L 282 207 L 291 199 L 306 185 L 318 174 L 326 167 L 331 163 L 336 159 L 340 156 L 343 154 L 347 151 L 352 147 L 355 145 L 359 142 L 362 140 L 365 138 L 369 135 L 375 130 L 395 109 L 399 104 L 402 100 L 403 98 L 405 95 L 406 93 L 408 90 L 409 88 L 410 86 L 411 84 L 412 82 L 413 79 L 414 76 L 415 73 L 416 70 L 417 63 L 418 45 L 417 39 L 416 37 Z" fill="#FF0000" style="transform-origin: 380.2122312203295px 126.98575816810947px; opacity: 0;" />
+    <path id="right-feather-2" class="right-feather" d="M 448 110 L 447 113 L 446 117 L 445 121 L 444 124 L 443 127 L 442 129 L 441 131 L 439 135 L 438 137 L 437 139 L 435 142 L 431 147 L 423 156 L 418 160 L 415 162 L 413 163 L 410 165 L 408 166 L 406 167 L 403 168 L 401 169 L 398 170 L 396 171 L 393 172 L 391 173 L 387 174 L 383 175 L 379 176 L 375 177 L 371 178 L 366 179 L 362 180 L 358 181 L 353 182 L 349 183 L 345 184 L 341 185 L 337 186 L 333 187 L 329 188 L 326 189 L 322 190 L 319 191 L 316 192 L 314 193 L 315 190 L 318 188 L 320 187 L 322 186 L 325 184 L 327 183 L 329 182 L 331 181 L 333 180 L 335 179 L 337 178 L 339 177 L 342 176 L 344 175 L 346 174 L 348 173 L 350 172 L 352 171 L 354 170 L 356 169 L 359 168 L 361 167 L 363 166 L 367 164 L 370 163 L 372 162 L 374 161 L 376 160 L 379 159 L 381 158 L 383 157 L 385 156 L 387 155 L 389 154 L 391 153 L 393 152 L 396 150 L 398 149 L 400 148 L 402 147 L 404 146 L 407 144 L 409 143 L 412 141 L 415 139 L 418 137 L 421 135 L 425 132 L 431 127 L 445 114 L 447 111 Z" fill="#FF0000" style="transform-origin: 393.079241614001px 158.3130772970345px; opacity: 0;" />
+    <path id="right-feather-3" class="right-feather" d="M 449 162 L 449 163 L 448 165 L 447 167 L 444 171 L 442 174 L 438 179 L 431 185 L 428 187 L 426 188 L 423 190 L 421 191 L 419 192 L 417 193 L 415 194 L 413 195 L 411 196 L 409 197 L 406 198 L 404 199 L 401 200 L 398 201 L 395 202 L 391 203 L 383 204 L 370 205 L 320 206 L 315 205 L 308 206 L 305 207 L 306 206 L 309 204 L 311 203 L 313 202 L 315 201 L 318 200 L 321 199 L 324 198 L 328 197 L 331 196 L 335 195 L 339 194 L 343 193 L 347 192 L 350 191 L 354 190 L 358 189 L 366 188 L 369 187 L 374 186 L 379 185 L 385 184 L 391 183 L 397 182 L 402 181 L 407 180 L 411 179 L 415 178 L 418 177 L 422 176 L 425 175 L 428 174 L 430 173 L 432 172 L 435 171 L 437 170 L 439 169 L 441 168 L 444 166 L 448 163 Z" fill="#FF0000" style="transform-origin: 382.20464441219156px 191.69569424286405px; opacity: 0;" />
+    <path id="right-feather-4" class="right-feather" d="M 423 207 L 425 208 L 414 218 L 411 220 L 407 223 L 405 224 L 403 225 L 401 226 L 398 227 L 395 228 L 389 229 L 354 230 L 343 229 L 336 228 L 329 227 L 323 226 L 317 225 L 312 224 L 306 223 L 303 222 L 297 221 L 294 220 L 288 219 L 288 217 L 291 216 L 295 215 L 303 214 L 316 213 L 375 212 L 400 211 L 409 210 L 411 210 L 416 209 L 420 208 L 422 208 Z" fill="#FF0000" style="transform-origin: 360.32820784729586px 219.7274655355249px; opacity: 0;" />
+    <path id="right-feather-5" class="right-feather" d="M 277 224 L 279 225 L 288 226 L 295 227 L 301 228 L 307 229 L 313 230 L 317 231 L 323 232 L 330 233 L 334 234 L 342 235 L 348 236 L 354 237 L 360 238 L 368 239 L 376 240 L 386 239 L 393 238 L 399 243 L 395 246 L 392 248 L 390 249 L 388 250 L 386 251 L 384 252 L 380 253 L 376 254 L 357 253 L 352 252 L 345 251 L 340 250 L 337 249 L 333 248 L 330 247 L 326 246 L 323 245 L 319 244 L 317 243 L 313 242 L 311 241 L 308 240 L 305 239 L 303 238 L 301 237 L 299 236 L 296 235 L 294 234 L 292 233 L 289 231 L 287 230 L 285 229 L 283 228 L 280 226 L 278 225 Z" fill="#FF0000" style="transform-origin: 343.80387257963775px 240.94565896314802px; opacity: 0;" />
+    <path id="right-feather-6" class="right-feather" d="M 271 230 L 273 231 L 275 232 L 277 233 L 279 234 L 281 235 L 283 236 L 285 237 L 287 238 L 289 239 L 291 240 L 293 241 L 295 242 L 297 243 L 299 244 L 302 245 L 304 246 L 306 247 L 308 248 L 310 249 L 312 250 L 315 251 L 317 252 L 319 253 L 322 254 L 325 255 L 327 256 L 330 257 L 333 258 L 335 259 L 338 260 L 341 261 L 344 262 L 348 263 L 356 264 L 364 265 L 373 266 L 379 267 L 377 268 L 375 269 L 372 271 L 369 272 L 367 273 L 364 274 L 357 275 L 345 276 L 340 275 L 338 275 L 334 274 L 332 273 L 329 272 L 327 271 L 325 270 L 323 269 L 321 268 L 319 267 L 317 266 L 315 265 L 312 263 L 310 262 L 307 260 L 304 258 L 301 256 L 298 254 L 295 252 L 291 249 L 286 245 L 272 231 Z" fill="#FF0000" style="transform-origin: 327.2395498392283px 260.0474276527331px; opacity: 0;" />
+    <path id="right-feather-7" class="right-feather" d="M 268 241 L 270 242 L 272 243 L 274 244 L 277 246 L 280 248 L 284 251 L 289 255 L 295 260 L 300 264 L 304 267 L 310 272 L 313 274 L 316 276 L 318 277 L 321 279 L 323 280 L 325 281 L 327 282 L 329 283 L 332 284 L 336 285 L 339 286 L 345 287 L 352 286 L 355 287 L 351 290 L 349 291 L 347 292 L 344 293 L 341 294 L 326 293 L 322 292 L 319 291 L 316 290 L 314 289 L 311 287 L 308 285 L 301 279 L 283 262 L 280 258 L 276 253 L 274 250 L 271 246 L 269 243 L 269 242 Z" fill="#FF0000" style="transform-origin: 309.1305637982196px 274.6815034619189px; opacity: 0;" />
+    <path id="right-feather-8" class="right-feather" d="M 266 251 L 268 254 L 271 258 L 274 262 L 279 268 L 290 280 L 294 283 L 304 292 L 309 296 L 312 298 L 316 301 L 318 302 L 321 304 L 322 306 L 307 307 L 303 306 L 300 305 L 298 304 L 296 303 L 294 302 L 291 300 L 283 291 L 279 286 L 277 283 L 276 281 L 274 278 L 273 276 L 272 274 L 271 272 L 270 268 L 269 266 L 268 261 L 267 256 L 266 252 Z" fill="#FF0000" style="transform-origin: 290.26112412177986px 286.3384074941452px; opacity: 0;" />
+    <path id="right-feather-9" class="right-feather" d="M 259 263 L 260 266 L 261 269 L 262 271 L 263 273 L 264 276 L 265 278 L 266 280 L 267 283 L 269 286 L 271 289 L 272 291 L 274 294 L 276 297 L 279 301 L 285 308 L 288 310 L 286 311 L 284 310 L 281 309 L 279 308 L 276 306 L 271 302 L 267 297 L 265 294 L 263 291 L 261 287 L 260 283 L 259 264 Z" fill="#FF0000" style="transform-origin: 269.01344086021504px 290.4005376344086px; opacity: 0;" />
+  </g>
+  <!-- Tail Feathers -->
+  <g id="tail-group">
+    <path id="tail-feather-main" class="tail-feather" d="M 233 339 L 234 343 L 235 348 L 236 351 L 237 355 L 238 360 L 239 364 L 240 368 L 241 371 L 242 375 L 243 378 L 244 383 L 245 386 L 246 388 L 247 391 L 248 394 L 249 396 L 250 399 L 251 402 L 252 404 L 253 407 L 254 409 L 255 412 L 256 417 L 257 420 L 258 424 L 259 430 L 260 457 L 259 463 L 258 467 L 257 470 L 256 473 L 255 476 L 254 478 L 253 481 L 252 483 L 251 485 L 249 488 L 248 490 L 247 492 L 245 495 L 244 497 L 242 500 L 240 503 L 239 505 L 238 507 L 237 509 L 236 511 L 235 513 L 234 516 L 233 518 L 232 513 L 230 509 L 228 506 L 227 504 L 225 501 L 224 499 L 223 497 L 221 494 L 220 492 L 219 490 L 217 487 L 216 485 L 214 481 L 213 479 L 212 476 L 211 474 L 210 471 L 209 468 L 208 463 L 207 457 L 206 433 L 207 426 L 208 422 L 209 418 L 210 415 L 211 411 L 212 409 L 213 407 L 214 403 L 215 400 L 216 398 L 217 395 L 218 393 L 219 390 L 220 387 L 221 384 L 222 380 L 223 377 L 224 373 L 225 370 L 226 365 L 227 361 L 228 357 L 229 353 L 230 349 L 231 345 L 232 340 Z" fill="#FF0000" style="transform-origin: 233.46564508156203px 436.24765200197726px; opacity: 0;" />
+  </g>
+  <!-- Center Body -->
+  <g id="body-group">
+    <path id="body-main" class="body-part" d="M 220 119 L 236 120 L 244 121 L 252 122 L 256 121 L 262 120 L 260 123 L 258 124 L 261 125 L 264 124 L 266 123 L 268 122 L 269 122 L 268 124 L 264 127 L 259 129 L 254 130 L 253 132 L 256 133 L 261 134 L 265 135 L 262 136 L 251 137 L 248 136 L 246 135 L 244 134 L 243 136 L 245 139 L 246 141 L 247 144 L 248 147 L 249 150 L 250 155 L 251 163 L 252 174 L 253 180 L 254 185 L 255 191 L 256 194 L 257 197 L 258 201 L 259 204 L 260 207 L 261 210 L 262 216 L 263 233 L 262 238 L 261 243 L 260 245 L 259 248 L 258 251 L 257 254 L 256 256 L 255 260 L 254 263 L 253 266 L 252 270 L 251 274 L 250 279 L 249 289 L 248 286 L 247 282 L 246 278 L 245 276 L 244 273 L 243 270 L 242 268 L 241 266 L 238 265 L 239 271 L 240 278 L 241 283 L 242 287 L 243 291 L 244 294 L 245 298 L 246 301 L 247 303 L 248 305 L 249 308 L 250 310 L 252 313 L 253 315 L 255 318 L 258 322 L 275 340 L 280 344 L 284 347 L 287 349 L 290 351 L 293 353 L 296 355 L 299 357 L 301 358 L 304 360 L 307 362 L 309 363 L 311 364 L 313 365 L 316 367 L 319 369 L 322 371 L 326 374 L 335 382 L 337 385 L 338 387 L 340 390 L 341 392 L 342 394 L 343 397 L 344 401 L 343 417 L 342 422 L 341 425 L 340 428 L 339 431 L 338 433 L 337 435 L 335 438 L 333 441 L 327 448 L 326 446 L 327 424 L 326 421 L 325 417 L 324 414 L 323 412 L 321 409 L 318 405 L 305 393 L 295 384 L 289 379 L 285 376 L 280 372 L 275 366 L 270 360 L 266 355 L 263 351 L 259 346 L 256 342 L 254 339 L 253 337 L 252 335 L 250 332 L 249 330 L 248 326 L 246 322 L 245 319 L 244 315 L 243 312 L 242 308 L 241 304 L 240 299 L 239 294 L 238 288 L 235 289 L 236 294 L 237 309 L 238 317 L 239 321 L 240 324 L 241 327 L 242 330 L 243 333 L 244 335 L 245 337 L 247 341 L 249 344 L 250 346 L 251 348 L 253 351 L 255 354 L 257 357 L 259 360 L 262 364 L 266 369 L 268 372 L 274 379 L 281 387 L 287 394 L 290 398 L 292 401 L 294 404 L 295 406 L 296 408 L 297 410 L 298 412 L 299 415 L 300 417 L 301 420 L 302 424 L 303 429 L 302 447 L 301 452 L 300 456 L 299 459 L 298 461 L 297 464 L 296 466 L 295 468 L 294 470 L 292 473 L 290 476 L 288 479 L 282 486 L 279 488 L 277 489 L 276 488 L 277 486 L 279 483 L 280 481 L 281 478 L 282 470 L 283 462 L 282 453 L 281 449 L 280 446 L 279 442 L 278 440 L 277 437 L 276 434 L 275 431 L 274 428 L 273 426 L 272 423 L 271 421 L 270 417 L 269 415 L 268 413 L 267 411 L 266 408 L 265 406 L 264 403 L 263 401 L 262 399 L 261 397 L 260 394 L 259 392 L 258 390 L 257 388 L 256 386 L 255 383 L 254 381 L 253 379 L 252 376 L 251 374 L 250 372 L 249 369 L 248 366 L 247 364 L 246 361 L 245 358 L 244 355 L 243 352 L 242 349 L 241 346 L 240 342 L 239 339 L 238 335 L 237 331 L 236 325 L 235 319 L 234 316 L 232 316 L 231 318 L 230 323 L 229 328 L 228 332 L 227 335 L 226 339 L 225 342 L 223 347 L 222 350 L 221 353 L 220 357 L 219 360 L 218 362 L 217 365 L 216 367 L 215 370 L 214 373 L 213 375 L 212 378 L 211 380 L 210 383 L 209 385 L 208 388 L 207 391 L 206 393 L 205 396 L 204 399 L 203 401 L 202 403 L 201 406 L 200 408 L 199 410 L 198 413 L 197 416 L 196 418 L 195 420 L 194 422 L 193 425 L 192 427 L 191 430 L 190 432 L 189 435 L 187 439 L 186 444 L 185 447 L 184 451 L 183 455 L 182 462 L 183 470 L 184 476 L 185 480 L 186 482 L 187 484 L 189 488 L 188 489 L 184 486 L 175 476 L 172 472 L 171 470 L 169 467 L 168 464 L 167 462 L 166 460 L 165 457 L 164 453 L 163 447 L 162 432 L 163 426 L 164 423 L 165 421 L 166 418 L 167 415 L 168 412 L 169 410 L 171 407 L 172 405 L 173 403 L 175 400 L 178 396 L 180 393 L 184 388 L 189 382 L 194 376 L 198 371 L 201 367 L 204 363 L 207 359 L 208 357 L 210 354 L 212 351 L 214 348 L 215 346 L 216 344 L 218 341 L 219 338 L 220 336 L 221 334 L 222 332 L 223 330 L 224 326 L 225 324 L 226 319 L 227 316 L 228 311 L 229 305 L 230 295 L 231 287 L 229 287 L 228 290 L 227 296 L 226 301 L 225 305 L 224 309 L 223 312 L 222 314 L 221 317 L 220 321 L 219 323 L 218 326 L 217 328 L 216 330 L 215 332 L 214 334 L 213 336 L 212 338 L 211 340 L 209 343 L 206 348 L 204 351 L 202 354 L 180 377 L 174 382 L 168 387 L 164 390 L 160 393 L 154 398 L 151 400 L 145 407 L 143 410 L 142 412 L 141 414 L 140 416 L 139 419 L 138 422 L 137 427 L 138 442 L 139 447 L 131 441 L 129 438 L 127 435 L 126 433 L 125 430 L 124 428 L 123 425 L 122 420 L 123 417 L 122 399 L 123 395 L 124 393 L 125 391 L 126 389 L 128 386 L 130 383 L 141 373 L 145 370 L 148 368 L 150 367 L 153 365 L 156 363 L 158 362 L 160 361 L 162 360 L 165 358 L 167 357 L 170 355 L 173 353 L 176 351 L 179 349 L 183 346 L 187 343 L 199 332 L 201 329 L 206 323 L 209 319 L 211 316 L 212 314 L 214 310 L 215 308 L 216 306 L 217 304 L 218 302 L 219 300 L 220 297 L 221 294 L 222 291 L 223 287 L 224 283 L 225 277 L 226 270 L 227 265 L 225 265 L 223 268 L 222 271 L 221 274 L 220 278 L 219 282 L 218 286 L 217 291 L 216 283 L 215 277 L 214 272 L 213 267 L 212 264 L 211 261 L 210 258 L 209 256 L 208 254 L 207 251 L 206 249 L 205 245 L 204 242 L 203 238 L 202 232 L 203 229 L 202 220 L 203 213 L 204 210 L 205 207 L 206 204 L 207 201 L 208 199 L 210 196 L 211 194 L 212 192 L 213 190 L 214 188 L 215 186 L 216 184 L 218 181 L 219 179 L 220 177 L 221 175 L 222 173 L 223 171 L 224 168 L 225 163 L 226 160 L 228 160 L 227 157 L 225 154 L 218 146 L 216 145 L 214 144 L 210 143 L 205 144 L 201 145 L 197 147 L 196 149 L 195 150 L 196 140 L 199 136 L 201 135 L 205 134 L 206 130 L 208 126 L 210 123 L 212 122 L 214 121 L 216 120 L 219 120 Z" fill="#FF0000" style="transform-origin: 232.9570716569494px 323.55750423170963px; opacity: 0;" />
+  </g>
+</svg>
             </div>
-            <div class="loader-text">Initializing Interface...</div>
+            <div class="loader-status">
+                <div class="loader-brand">{ HARI PRASANTH }</div>
+                <div class="loader-progress-bar-bg">
+                    <div class="loader-progress-bar-fill"></div>
+                </div>
+                <div class="loader-status-text">INITIALIZING INTERFACE<span class="loader-dots"></span></div>
+            </div>
         </div>
     </div>
 
-    <!-- ==========================================================================
+        <!-- ==========================================================================
        2. Custom Cursor & Interactive Glow Elements
        ========================================================================== -->
     <div class="custom-cursor-dot"></div>
@@ -169,10 +219,13 @@
             </div>
             
             <div class="hero-image-wrapper reveal reveal-right">
-                <div class="profile-frame">
-                    <div class="profile-neon-line"></div>
-                    <div class="profile-img-container">
-                        <img src="Images/about hari.png" alt="Hari Prasanth Profile Photo">
+                <div class="profile-card-stack">
+                    <div class="profile-card-back blob-back"></div>
+                    <div class="profile-card-back glass-back"></div>
+                    <div class="profile-frame">
+                        <div class="profile-img-container">
+                            <img src="Images/profile final.png" alt="Hari Prasanth Profile Photo">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -389,6 +442,12 @@
            8. Projects Section
            ========================================================================== -->
         <section id="projects" class="projects-section">
+            <div class="projects-3d-grid-container">
+                <div class="projects-3d-grid"></div>
+                <div class="projects-glow-bubble pgb-1"></div>
+                <div class="projects-glow-bubble pgb-2"></div>
+                <div class="projects-horizon-glow"></div>
+            </div>
             <div class="container">
                 <div class="section-header reveal reveal-up">
                     <h2 class="section-title">My <span>Projects</span></h2>
@@ -784,32 +843,71 @@
                 
                 <div class="achievements-list">
                     <!-- Achievement 1 -->
-                    <div class="achievement-item reveal reveal-left reveal-delay-1">
-                        <div class="achievement-icon">
-                            <i>🏆</i>
+                    <div class="achievement-terminal reveal reveal-up reveal-delay-1">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="terminal-title">quantum_nexus.sh</div>
                         </div>
-                        <div class="achievement-text">
-                             Participated in <b>Quantum Nexus 2.0</b>, a National-level Technical Symposium featuring Paper Presentation, Code Fix, and UI/UX events, organized by the Cyber Security Club, Vel Tech High Tech Engineering College.
+                        <div class="terminal-body">
+                            <div class="terminal-prompt">
+                                
+                            </div>
+                            <div class="terminal-output">
+                                <span class="output-icon">🏆</span>
+                                <p class="achievement-desc">
+                                    Participated in <b>Quantum Nexus 2.0</b>, a National-level Technical Symposium featuring Paper Presentation, Code Fix, and UI/UX events, organized by the Cyber Security Club, Vel Tech High Tech Engineering College.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Achievement 2 -->
-                    <div class="achievement-item reveal reveal-right reveal-delay-2">
-                        <div class="achievement-icon">
-                            <i>🤖</i>
+                    <div class="achievement-terminal reveal reveal-up reveal-delay-2">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="terminal-title">xconcave_hackathon.sh</div>
                         </div>
-                        <div class="achievement-text">
-                            <b>Hackathon Participation:</b> Participated in the X Concave Hackathon held at Takshashila University, collaborating in a team to build innovative technical solutions under intense time limits.
+                        <div class="terminal-body">
+                            <div class="terminal-prompt">
+                                
+                            </div>
+                            <div class="terminal-output">
+                                <span class="output-icon">🤖</span>
+                                <p class="achievement-desc">
+                                    <b>Hackathon Participation:</b> Participated in the X Concave Hackathon held at Takshashila University, collaborating in a team to build innovative technical solutions under intense time limits.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Achievement 3 -->
-                    <div class="achievement-item reveal reveal-left reveal-delay-3">
-                        <div class="achievement-icon">
-                            <i>🚀</i>
+                    <div class="achievement-terminal reveal reveal-up reveal-delay-3">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="terminal-title">scimit_expo.sh</div>
                         </div>
-                        <div class="achievement-text">
-                             <b>SCIMIT 2026 Mega Project Expo:</b> Presented the CyberMed project demonstrating a Blockchain-based authentication solution for verifying genuine medicine supplies.
+                        <div class="terminal-body">
+                            <div class="terminal-prompt">
+                                
+                            </div>
+                            <div class="terminal-output">
+                                <span class="output-icon">🚀</span>
+                                <p class="achievement-desc">
+                                    <b>SCIMIT 2026 Mega Project Expo:</b> Presented the CyberMed project demonstrating a Blockchain-based authentication solution for verifying genuine medicine supplies.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

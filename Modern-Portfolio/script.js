@@ -1,24 +1,153 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // ==========================================================================
-    // 1. Loading Preloader
+    // 1. Loading Preloader (Cinematic Brand Logo Initialization)
     // ==========================================================================
     const preloader = document.getElementById("preloader");
+    const loaderPercentage = document.querySelector(".loader-percentage");
     
-    // Simulate loading completion
+    // Lock scroll during initialization
+    document.body.style.overflow = "hidden";
+    
+    // Prepare wing feathers for entrance
+    const leftFeathers = document.querySelectorAll(".left-feather");
+    const rightFeathers = document.querySelectorAll(".right-feather");
+    const bodyMain = document.getElementById("body-main");
+    const tailFeather = document.getElementById("tail-feather-main");
+    const bgGlow = document.getElementById("loader-bg-glow");
+    const logoSvg = document.getElementById("loader-phoenix-svg");
+    
+    // Set initial off-screen / invisible states to prevent FOUC (flash of unstyled content)
+    if (leftFeathers.length > 0) {
+        gsap.set(leftFeathers, { x: -450, opacity: 0, rotation: -40, filter: "blur(6px)" });
+    }
+    if (rightFeathers.length > 0) {
+        gsap.set(rightFeathers, { x: 450, opacity: 0, rotation: 40, filter: "blur(6px)" });
+    }
+    if (bodyMain) {
+        gsap.set(bodyMain, { y: -250, opacity: 0, scale: 0.7 });
+    }
+    if (tailFeather) {
+        gsap.set(tailFeather, { opacity: 0, scaleY: 0, transformOrigin: "top center" });
+    }
+    if (bgGlow) {
+        gsap.set(bgGlow, { opacity: 0, scale: 0.5 });
+    }
+    
+    // Start timeline on window load
     window.addEventListener("load", () => {
-        setTimeout(() => {
-            if (preloader) {
-                preloader.classList.add("fade-out");
+        const loaderTimeline = gsap.timeline({
+            onComplete: () => {
+                // Unlock scroll
+                document.body.style.overflow = "";
+                
+                // Fade out preloader container
+                gsap.to(preloader, {
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        if (preloader) {
+                            preloader.style.display = "none";
+                        }
+                        // Trigger scroll reveals and profile card animation
+                        revealOnScroll();
+                        if (window.playProfileEntrance) {
+                            window.playProfileEntrance();
+                        }
+                    }
+                });
             }
-            // Trigger initial reveal animations
-            revealOnScroll();
-            
-            // Trigger profile photo entrance animation
-            if (window.playProfileEntrance) {
-                window.playProfileEntrance();
+        });
+        
+        // 0.0s: Progress bar width fill animation (0% to 100%)
+        loaderTimeline.to(".loader-progress-bar-fill", {
+            width: "100%",
+            duration: 2.2,
+            ease: "power1.out"
+        }, 0);
+        
+        // 0.3s: Left Wing Feathers fly in from the left, staggered
+        loaderTimeline.to(leftFeathers, {
+            x: 0,
+            opacity: 1,
+            rotation: 0,
+            filter: "blur(0px)",
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: {
+                each: 0.08,
+                from: "end" // assemblies from outer/bottom-most upwards
             }
-        }, 1200); // 1.2s delay for visual boot-up feel
+        }, 0.3);
+        
+        // 0.3s: Right Wing Feathers fly in from the right, staggered (mirrored)
+        loaderTimeline.to(rightFeathers, {
+            x: 0,
+            opacity: 1,
+            rotation: 0,
+            filter: "blur(0px)",
+            duration: 1.2,
+            ease: "power3.out",
+            stagger: {
+                each: 0.08,
+                from: "end"
+            }
+        }, 0.3);
+        
+        // 0.6s: Central Body descends from the top
+        loaderTimeline.to(bodyMain, {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            duration: 1.4,
+            ease: "power2.out"
+        }, 0.6);
+        
+        // 1.5s: Tail Feathers grow downward
+        loaderTimeline.to(tailFeather, {
+            opacity: 1,
+            scaleY: 1,
+            duration: 1.0,
+            ease: "back.out(1.2)"
+        }, 1.5);
+        
+        // 2.2s: All parts merge / Energy pulse starts
+        loaderTimeline.to(logoSvg, {
+            scale: 1.06,
+            duration: 0.2,
+            ease: "power2.out"
+        }, 2.2);
+        
+        // Soft red ambient glow behind the logo fades in and expands
+        loaderTimeline.to(bgGlow, {
+            opacity: 0.35,
+            scale: 1.2,
+            duration: 0.3,
+            ease: "power2.out"
+        }, 2.2);
+        
+        // 2.4s: Settle logo scale and light glow release
+        loaderTimeline.to(logoSvg, {
+            scale: 1,
+            duration: 0.6,
+            ease: "elastic.out(1, 0.5)"
+        }, 2.4);
+        
+        loaderTimeline.to(bgGlow, {
+            opacity: 0.2,
+            scale: 1.0,
+            duration: 0.6,
+            ease: "power2.out"
+        }, 2.4);
+        
+        // 3.0s: Dissolve logo slightly and scale down to fade into homepage
+        loaderTimeline.to(logoSvg, {
+            scale: 0.94,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.inOut"
+        }, 3.0);
     });
 
     // ==========================================================================
@@ -912,13 +1041,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================================================
     // 13. Profile Image Premium Entrance & 3D Interactive Hover System
     // ==========================================================================
+    const profileStack = document.querySelector(".profile-card-stack");
     const profileFrame = document.querySelector(".profile-frame");
-    if (profileFrame) {
+    if (profileStack && profileFrame) {
         let floatTimeline = null;
 
         // Custom Entrance Animation using GSAP
         window.playProfileEntrance = function() {
-            gsap.to(profileFrame, {
+            gsap.to(profileStack, {
                 y: 0,
                 opacity: 1,
                 scale: 1,
@@ -932,21 +1062,21 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         };
 
-        // Gentle Floating Loop
+        // Gentle Floating Loop (floats the entire stack together)
         function startProfileFloating() {
             floatTimeline = gsap.timeline({ repeat: -1 });
-            floatTimeline.to(profileFrame, {
+            floatTimeline.to(profileStack, {
                 y: -7, // float up by 7px
                 duration: 3,
                 ease: "power1.inOut"
-            }).to(profileFrame, {
+            }).to(profileStack, {
                 y: 7, // float down by 7px
                 duration: 3,
                 ease: "power1.inOut"
             });
         }
 
-        // 3D Tilt and Purple Specular Glow on Hover
+        // 3D Tilt and Purple Specular Glow on Hover (tilts the top card individually)
         function initProfileHover() {
             const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
             if (isTouchDevice) return; // Disable hover tilts on touch devices
@@ -958,7 +1088,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 gsap.to(profileFrame, {
                     scale: 1.03,
-                    boxShadow: "0 0 45px rgba(123, 97, 255, 0.65)", // soft purple glow backdrop
+                    boxShadow: "0 20px 50px rgba(143, 67, 255, 0.35)", // purple glow backdrop
                     duration: 0.5,
                     ease: "power2.out"
                 });
@@ -975,8 +1105,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Subtle 3D tilt tracking cursor
                 gsap.to(profileFrame, {
-                    rotateX: -normY * 12,
-                    rotateY: normX * 12,
+                    rotateX: -normY * 15,
+                    rotateY: normX * 15,
                     duration: 0.3,
                     ease: "power2.out",
                     overwrite: "auto"
@@ -992,7 +1122,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     scale: 1,
                     rotateX: 0,
                     rotateY: 0,
-                    boxShadow: "0 10px 40px rgba(0, 0, 0, 0.4)", // reset to default shadow
+                    boxShadow: "0 15px 40px rgba(0, 0, 0, 0.5)", // reset to default shadow
                     duration: 0.6,
                     ease: "power3.out"
                 });
