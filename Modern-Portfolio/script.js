@@ -1008,7 +1008,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (resumeBtn && resumeModal) {
         resumeBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            if (modalIframe) modalIframe.src = "final resume.pdf";
+            if (modalIframe) modalIframe.src = "Final resume.pdf";
             resumeModal.classList.add("active");
             document.body.style.overflow = "hidden"; // Prevent body scroll
         });
